@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ثانوية أبي حامد الغزالي</title>
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<style>
+  
+  @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
+.mt-3{
+  font-family: 'Lateef', serif; line-height:30px; font-size:20px
+  }
+  .flux {
+ font-family: neon;
+  color: #eff3ff;
+  font-size: 9w;
+  line-height: 9vw;
+  text-shadow: 0 0 3vw #2356FF;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 100;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.5s;
+}
+.header:hover::before {
+  left: 100%;
+}
+.logo {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: default;
+}
+.navbar a {
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  margin-left: 35px;
+  transition: 0.3s;
+}
+.navbar a:hover {
+  color: #f00;
+}
+#menu-icon {
+  font-size: 36px;
+  color: #fff;
+  display: none;
+}
+/* BREAKPOINTS */
+@media (max-width: 992px) {
+  .header {
+    padding: 1.25rem 4%;
+  }
+}
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 0.5rem 4%;
+    display: none;
+  }
+  .navbar.active {
+    display: block;
+  }
+  .navbar a {
+    display: block;
+    margin: 1.5rem 0;
+  }
+  .nav-bg {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    width: 100%;
+    height: 295px;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    z-index: 99;
+    display: none;
+  }
+  .nav-bg.active {
+    display: block;
+  }
+}
+  /* Reset CSS */
+  
+
+
+body {
+  font-family: Arial, sans-serif;
+background-color:#07252d;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  
+
+}
+
+/* Top Bar Styles */
+
+
+
+
+.display-4{
+  margin-top: 20px
+}
+.show {
+  display: block;
+}
+
+/* School Image Styles */
+.school-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-info{
+   color: #dbdbdb;
+   font-size: 250px;
+  text-decoration: none;
+  font-weight: 60;
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
+}
+
+.card-description {
+    color: #fff;
+  padding: 20px;
+  text-align: center;
+  direction: rtl ;
+}
+
+/* Spacer Styles */
+.spacer {
+  height: 20px; 
+}
+
+/* Main Content Styles */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+  
+  
+}
+.container2 {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 10 20px;
+  text-align: center;
+      background: wheat;
+    text-align:right;
+    direction: rtl;
+}
+.card-info2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  margin-bottom: 70px;  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  
+   
+}
+.grid-row {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* تقسيم العناصر إلى زوجين في كل سطر */
+  gap: 20px; /* هامش بين العناصر */
+}
+
+.card-link {
+  text-decoration: none; /* إزالة تزيين الرابط */
+  color: inherit; /* استخدام لون النص نفسه */
+}
+
+.cards {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
+  width: calc(110% - 10px); /* تحديد عرض البطاقة بنسبة 50% من عرض السطر مع هامش بينهم */
+   
+}
+@media screen and (min-width: 768px) {
+  .grid-row {
+    display: flex;
+    justify-content: center; /* توسيط البطاقات على شاشة الكمبيوتر */
+  }
+.card-info{
+    width: 50%; /* تحديد عرض البطاقة في شاشة الكمبيوتر */
+    margin: 0 auto; /* توسيط البطاقة 
+    */
+
+  margin-bottom: 50px; /* إضافة مسافة بين البطاقة والمحتوى أسفلها */
+
+
+  }
+  }
+
+  .school-image {
+    max-width: 100%; /* تحديد أقصى عرض للصورة بناءً على عرض البطاقة */
+    height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+  }
+
+  .card-description {
+    font-size: 14px; /* تحديد حجم الخط للنص في شاشة الكمبيوتر */
+  }
+}
+ 
+  .cards {
+    width: calc(50% - 20px); /* تحديد عرض البطاقات على شاشات الكمبيوتر */
+    margin-right: 20px; /* إضافة هامش بين البطاقات */
+  }
+
+  .cards:last-child {
+    margin-right: 0; /* لإزالة الهامش الأيمن للبطاقة الأخيرة وتجنب التلاصق */
+  }
+}
+
+.cards p {
+  padding: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .cards {
+  transform: translateY(-5px);
+}
+
+
+
+
+.exam-table-frame {
+  border: 7px solid black;
+  display: inline-block;
+  padding: 10px;
+  
+}
+
+.exam-table-title {
+  color: black;
+  
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color: #d8d8d8;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+.exam-table-container {
+  
+  text-align: center; /* توسيط الجدول في الصفحة */
+}
+
+.exam-table-image {
+  max-width: 120px; /* جعل الصورة تأخذ عرضًا أقصى مناسبًا */
+  height: 70%; /* تغيير الارتفاع تلقائيًا للحفاظ على نسبة العرض إلى الارتفاع */
+}
+.rectangle-container {
+background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 9px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  margin-top: 20px;
+}
+
+.text-container p {
+  margin-bottom: 90px;
+
+}
+
+<center>
+/* تعديل حجم الجدول في أجهزة الكمبيوتر الكبيرة */
+@media screen and (min-width: 720px) {
+  .exam-table-container {
+ align-self: center;
+    max-width: 100%; /* يمكن تعديل هذا الحجم حسب الحاجة */
+    
+  }
+}
+</center>
+</style>
+</head>
+     
+<body>
+  
+      <header class="header">
+        <a href="#" class="logo">abihamed elghazali</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">news</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="card-info">
+    <img src="photo/school_image.jpg" alt="ثانوية أبي حامد الغزالي" class="school-image">
+    <div class="card-description">
+      <p>ثانوية أبي حامد الغزالي هي مؤسسة تعليمية متميزة تهدف إلى تقديم أفضل خدمة تعليمية للطلاب.</p>
+    </div>
+  </div>
+
+  <div class="grid-row">
+    <div class="cards">
+      <a href="https://maps.app.goo.gl/1owVCanFvKtkR6nJ8
+     " class="card-link">
+        <div class="card-description">
+          <p class="flux">
+ موقع الثانوية  google map
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="cards">
+      <a href="syte/social.html" class="card-link">
+        <div class="card-description">
+          <p class="flux">
+            موقع به جميع وسائل التواصل
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="cards">
+      <a href=" syte/news.html" class="card-link">
+        <div class="card-description">
+          <p class="flux">
+ اضغط هنا للذهاب إلى صفحة الأخبار map
+          </p>
+        </div>
+      </a>
+    </div>
+    <div class="cards">
+      <a href="syte/exam.html" class="card-link">
+        <div class="card-description">
+          <p class="flux">
+      الفروض والاختبارات مع التصحيح  
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="grid-row">
+    <div class="rectangle-container">
+    <div class="exam-table-container">
+      <div class="exam-table-frame">
+        <h2 class="exam-table-title">جدول اختبارت 1</h2>
+        <img src="photo/1exam.jpg" alt="جدول الاختبارات" class="exam-table-image">
+      </div>
+    </div>
+    </div>
+    <div class="rectangle-container">
+    <div class="exam-table-container">
+      <div class="exam-table-frame">
+        <h2 class="exam-table-title">جدول اختبارات 2</h2>
+        <img src="photo/2exam.jpg" alt="جدول الاختبارات" class="exam-table-image">
+      </div>
+    </div>
+ 
+  </div>
+</div>
+
+<div class="container2">
+  <div class="card-info2">
+<div style="height: 10px;"></div>
+<div class="text-container">
+        <div class="container">
+            <h1 class="display-4">أبو حامد الغزالي</h1>
+        </div>
+        </div>
+    </header>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <img src="photo/al-ghazali.jpg" alt="صورة لأبو حامد الغزالي" class="img-fluid rounded shadow">
+                <br>
+                <br>
+                <p class="mt-3">
+                  أبو حامد محمد بن محمد الغزالي الطوسي، المعروف بالإمام الغزالي، هو شخصية علمية وفيلسوف إسلامي بارز في العصور الوسطى. وُلد في طوس (الطائفة الغزالية، في خراسان، إيران الحالية) حوالي عام 1058 ميلادي وتوفي في بغداد عام 1111 ميلادي. يُعتبر الغزالي من بين أبرز العلماء والفلاسفة في التاريخ الإسلامي وأحد أبرز شخصيات الفكر الإنساني على مر العصور.
+                </p>
+                <br>
+                <p class="mt-3">
+                  تميز الغزالي بتعدد مجالات تأثيره، حيث كان فقيهاً، وفيلسوفاً، ومفسراً، ومعلماً، وكاتباً، وصوفياً. تميزت أعماله بالتنوع والشمولية، حيث تطرق في كتاباته إلى مجموعة واسعة من المواضيع بما في ذلك اللاهوت، والفلسفة، والقانون، والأخلاق، والتصوف.
+                </p>
+                <br>
+                  <p class="mt-3">
+                    أحد أهم إسهامات الغزالي كانت في مجال التصوف، حيث قام بتصحيح بعض المفاهيم الخاطئة حول التصوف والتي تشوبها بعض التطرفات والابتداعات غير الإسلامية. وقدم منهجاً متوسطاً في التصوف يؤكد على الأهمية القصوى للتزام الشريعة الإسلامية والتوازن بين العبادة والعمل في الحياة اليومية.
+                  </p>
+                  <br>
+                 <p class="mt-3">
+                   في الفلسفة، تنوعت أعمال الغزالي بين التأليف في الفلسفة الأصولية ونقده لبعض المذاهب الفلسفية اليونانية. وأشهر أعماله في هذا المجال هو "المنقذ من الضلال"، حيث قام فيه بنقد وإصلاح الأفكار الفلسفية واللاهوتية التي كانت تتداول في زمانه.
+                 </p>
+                 <br>
+                 <p class="mt-3">
+                   بالإضافة إلى ذلك، كان الغزالي مؤرخاً ومتكلماً بارعاً، حيث ساهم في تطوير المنهج التاريخي والمنطقي. وقدم تحليلات عميقة لمفاهيم العلم والمعرفة، وأثرى المكتبة الإسلامية بأعماله الفكرية والعلمية المتنوعة.
+                 </p>
+                 <br>
+                <p class="mt-3">
+                  باختصار، يمكن اعتبار الإمام الغزالي شخصية فكرية وروحية استثنائية، أثرت بشكل عميق في الفكر الإسلامي والإنسانية بشكل عام، ولا تزال أعماله مصدر إلهام للعديد من الباحثين والمفكرين في العالم اليوم.
+                </p>
+                                              <div style="height: 40px;"></div>
+                                                                  
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    </div>
+<footer class="footer">
+  <div class="footer-content">
+    <p class="footer-text">جميع الحقوق محفوظة &copy; 2024 - mellouk dhiya (2TM)</p>
+  </div>
+</footer>
+    <div class="nav-bg"></div>
+    <script>
+      const menuIcon = document.querySelector('#menu-icon');
+const navbar = document.querySelector('.navbar');
+const navbg = document.querySelector('.nav-bg');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('active');
+    navbg.classList.toggle('active');
+});
+    </script>
+
+
+</body>
+</html>
