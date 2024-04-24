@@ -42,10 +42,10 @@
   z-index: 100;
 }
 .header::before {
-  content: "";
+  content: "test";
   position: absolute;
   top: 0;
-  left: -100%;
+  left: 100%;
   width: 100%;
   height: 100%;
   background: linear-gradient(
@@ -54,10 +54,28 @@
     rgba(255, 255, 255, 0.4),
     transparent
   );
-  transition: 0.5s;
+  transition: 0.8s;
 }
 .header:hover::before {
+  left: -100%;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
   left: 100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transition: 0.8s;
+}
+.header:hover::before {
+  left: -100%;
 }
 .logo {
   color: #fff;
@@ -65,56 +83,91 @@
   text-decoration: none;
   font-weight: 600;
   cursor: default;
+    order: 1;
+  margin: 0 auto;
 }
 .navbar a {
+  text-align: right;
   color: #fff;
   font-size: 18px;
   text-decoration: none;
   margin-left: 35px;
   transition: 0.3s;
+  
 }
 .navbar a:hover {
   color: #f00;
+
 }
 #menu-icon {
   font-size: 36px;
   color: #fff;
   display: none;
+    order: 2;
 }
 /* BREAKPOINTS */
 @media (max-width: 992px) {
   .header {
     padding: 1.25rem 4%;
+    
+
   }
 }
+@media (min-width: 992px) {
+  .logo {
+    order: 1; /* تم تغيير ترتيب الشعار */
+    
+  }
+
+    .navbar {
+    order: 2; /* تم تغيير ترتيب أيقونة القائمة */
+  }
+}
+
 @media (max-width: 768px) {
+  .logo{
+    text-align: left;
+  }
+
   #menu-icon {
     display: block;
+    white-space: nowrap;
   }
   .navbar {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 4%;
     width: 100%;
-    padding: 0.5rem 4%;
+    padding: 0.5rem 10%;
     display: none;
+    
   }
   .navbar.active {
     display: block;
   }
   .navbar a {
     display: block;
-    margin: 1.5rem 0;
+    margin: 2.3rem ;
+
   }
   .nav-bg {
-    position: absolute;
+    
+  background-color: #fff; /* لون خلفية البطاقة */
+  border: 5px solid #000; /* حافة سوداء */
+  border-radius: 10px; /* تدوير الحواف */
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* ظلال لإضافة إضاءة */
+  padding: 80px; /* تباعد داخلي */
+  max-width: 100%; /* العرض الأقصى للبطاقة */
+  margin: 0 auto; /* توسيط البطاقة */
+
+    position: fixed;
     top: 79px;
-    left: 0;
-    width: 100%;
+    right: 3%;
+ 
     height: 295px;
     background: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+ 
+    backdrop-filter: blur(100px);
     z-index: 99;
     display: none;
   }
@@ -304,10 +357,10 @@ background-color:#07252d;
 
 /* Footer Styles */
 .footer {
+    position: fixed;
   background-color: #d8d8d8;
   padding: 10px;
   text-align: center;
-  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -366,14 +419,13 @@ background: rgba(255, 255, 255, 0.1);
 <body>
   
       <header class="header">
-        <a href="#" class="logo">abihamed elghazali</a>
+        <a class="logo">abihamed elghazali</a>
         <i class='bx bx-menu' id="menu-icon"></i>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">news</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#">الرئيسية</a>
+            <a href="#">صفحة الاخبار</a>
+            <a href="#">عن المدرسة</a>
+            <a href="#">اتصل بنا</a>
         </nav>
     </header>
 <br>
@@ -412,9 +464,7 @@ background: rgba(255, 255, 255, 0.1);
     <div class="cards">
       <a href=" syte/news.html" class="card-link">
         <div class="card-description">
-          <p class="flux">
- اضغط هنا للذهاب إلى صفحة الأخبار 
-          </p>
+          <p class="flux">موقع اخبار الثانوية</p>
         </div>
       </a>
     </div>
@@ -505,6 +555,7 @@ background: rgba(255, 255, 255, 0.1);
 </footer>
     <div class="nav-bg"></div>
     <script>
+    
       const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('.navbar');
 const navbg = document.querySelector('.nav-bg');
@@ -514,7 +565,5 @@ menuIcon.addEventListener('click', () => {
     navbg.classList.toggle('active');
 });
     </script>
-
-
 </body>
 </html>
