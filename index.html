@@ -3,436 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ثانوية أبي حامد الغزالي</title>
-      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<style>
-  
-  @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
-.mt-3{
-  font-family: 'Lateef', serif; line-height:30px; font-size:20px
-  }
-  .flux {
- font-family: neon;
-  color: #eff3ff;
-  font-size: 9w;
-  line-height: 9vw;
-  text-shadow: 0 0 3vw #2356FF;
-
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  background: rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  z-index: 100;
-}
-.header::before {
-  content: "test";
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition: 0.8s;
-}
-.header:hover::before {
-  left: -100%;
-}
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition: 0.8s;
-}
-.header:hover::before {
-  left: -100%;
-}
-.logo {
-  color: #fff;
-  font-size: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
-    order: 1;
-  margin: 0 auto;
-}
-.navbar a {
-  text-align: right;
-  color: #fff;
-  font-size: 18px;
-  text-decoration: none;
-  margin-left: 35px;
-  transition: 0.3s;
-  
-}
-.navbar a:hover {
-  color: #f00;
-
-}
-#menu-icon {
-  font-size: 36px;
-  color: #fff;
-  display: none;
-    order: 2;
-}
-/* BREAKPOINTS */
-@media (max-width: 992px) {
-  .header {
-    padding: 1.25rem 4%;
-    
-
-  }
-}
-@media (min-width: 992px) {
-  .logo {
-    order: 1; /* تم تغيير ترتيب الشعار */
-    
-  }
-
-    .navbar {
-    order: 2; /* تم تغيير ترتيب أيقونة القائمة */
-  }
-}
-
-@media (max-width: 768px) {
-  .logo{
-    text-align: left;
-  }
-
-  #menu-icon {
-    display: block;
-    white-space: nowrap;
-  }
-  .navbar {
-    position: absolute;
-    top: 100%;
-    left: 4%;
-    width: 100%;
-    padding: 0.5rem 10%;
-    display: none;
-    
-  }
-  .navbar.active {
-    display: block;
-  }
-  .navbar a {
-    display: block;
-    margin: 2.3rem ;
-
-  }
-  .nav-bg {
-    
-  background-color: #fff; /* لون خلفية البطاقة */
-  border: 5px solid #000; /* حافة سوداء */
-  border-radius: 10px; /* تدوير الحواف */
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1); /* ظلال لإضافة إضاءة */
-  padding: 80px; /* تباعد داخلي */
-  max-width: 100%; /* العرض الأقصى للبطاقة */
-  margin: 0 auto; /* توسيط البطاقة */
-
-    position: fixed;
-    top: 79px;
-    right: 3%;
- 
-    height: 295px;
-    background: rgba(255, 255, 255, 0.1);
- 
-    backdrop-filter: blur(100px);
-    z-index: 99;
-    display: none;
-  }
-  .nav-bg.active {
-    display: block;
-  }
-}
-  /* Reset CSS */
-  
-
-
-body {
-  font-family: Arial, sans-serif;
-background-color:#07252d;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  
-
-}
-
-/* Top Bar Styles */
-
-
-
-
-.display-4{
-  margin-top: 20px
-}
-.show {
-  display: block;
-}
-
-/* School Image Styles */
-.school-image {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.card-info{
-   color: #dbdbdb;
-   font-size: 250px;
-  text-decoration: none;
-  font-weight: 60;
- 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 5px;
-  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
-  margin-bottom: 20px;
-}
-
-.card-description {
-    color: #fff;
-  padding: 20px;
-  text-align: center;
-  direction: rtl ;
-}
-
-/* Spacer Styles */
-.spacer {
-  height: 20px; 
-}
-
-/* Main Content Styles */
-.container {
-  max-width: 1000px;
-  margin: 20px auto;
-  padding: 0 20px;
-  text-align: center;
-  
-  
-}
-.container2 {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 10 20px;
-  text-align: center;
-      background: wheat;
-    text-align:right;
-    direction: rtl;
-}
-.card-info2{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-  margin-bottom: 70px;  border-radius: 17px;
-  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
-  
-   
-}
-.grid-row {
-  
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* تقسيم العناصر إلى زوجين في كل سطر */
-  gap: 20px; /* هامش بين العناصر */
-}
-
-.card-link {
-  text-decoration: none; /* إزالة تزيين الرابط */
-  color: inherit; /* استخدام لون النص نفسه */
-}
-
-.cards {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 17px;
-  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
-  margin-bottom: 20px;
-  width: calc(110% - 10px); /* تحديد عرض البطاقة بنسبة 50% من عرض السطر مع هامش بينهم */
-   
-}
-@media screen and (min-width: 768px) {
-  .grid-row {
-    display: flex;
-    justify-content: center; /* توسيط البطاقات على شاشة الكمبيوتر */
-  }
-.card-info{
-    width: 50%; /* تحديد عرض البطاقة في شاشة الكمبيوتر */
-    margin: 0 auto; /* توسيط البطاقة 
-    */
-
-  margin-bottom: 50px; /* إضافة مسافة بين البطاقة والمحتوى أسفلها */
-
-
-  }
-  }
-
-  .school-image {
-    max-width: 100%; /* تحديد أقصى عرض للصورة بناءً على عرض البطاقة */
-    height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
-  }
-
-  .card-description {
-    font-size: 14px; /* تحديد حجم الخط للنص في شاشة الكمبيوتر */
-  }
-}
- 
-  .cards {
-    width: calc(50% - 20px); /* تحديد عرض البطاقات على شاشات الكمبيوتر */
-    margin-right: 20px; /* إضافة هامش بين البطاقات */
-  }
-
-  .cards:last-child {
-    margin-right: 0; /* لإزالة الهامش الأيمن للبطاقة الأخيرة وتجنب التلاصق */
-  }
-}
-
-.cards p {
-  padding: 20px;
-}
-
-.card-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.card-link:hover .cards {
-  transform: translateY(-5px);
-}
-
-
-
-
-.exam-table-frame {
-  border: 7px solid black;
-  display: inline-block;
-  padding: 10px;
-  
-}
-
-.exam-table-title {
-  color: black;
-  
-}
-
-
-/* Footer Styles */
-.footer {
-    position: fixed;
-  background-color: #d8d8d8;
-  padding: 10px;
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-}
-
-.footer-content {
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.footer-text {
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  color: #666;
-  margin: 0;
-}
-.exam-table-container {
-  
-  text-align: center; /* توسيط الجدول في الصفحة */
-}
-
-.exam-table-image {
-  max-width: 120px; /* جعل الصورة تأخذ عرضًا أقصى مناسبًا */
-  height: 70%; /* تغيير الارتفاع تلقائيًا للحفاظ على نسبة العرض إلى الارتفاع */
-}
-.rectangle-container {
-background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 9px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.text-container {
-  margin-top: 20px;
-}
-
-.text-container p {
-  margin-bottom: 90px;
-
-}
-
-<center>
-/* تعديل حجم الجدول في أجهزة الكمبيوتر الكبيرة */
-@media screen and (min-width: 720px) {
-  .exam-table-container {
- align-self: center;
-    max-width: 100%; /* يمكن تعديل هذا الحجم حسب الحاجة */
-    
-  }
-}
-</center>
-</style>
+  <title>ابي حامد الغزالي</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-     
 <body>
-  
-      <header class="header">
-        <a class="logo">abihamed elghazali</a>
-        <i class='bx bx-menu' id="menu-icon"></i>
-        <nav class="navbar">
-            <a href="#">الرئيسية</a>
-            <a href="#">صفحة الاخبار</a>
-            <a href="#">عن المدرسة</a>
-            <a href="#">اتصل بنا</a>
-        </nav>
-    </header>
-<br>
-<br>
-<br>
-<br>
-<br>
+  <nav>
+    <input type="checkbox" id="sidebar-active">
+    <label for="sidebar-active" class="open-sidebar-button">
+      <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+    </label>
+    <label id="overlay" for="sidebar-active"></label>
+    <div class="links-container">
+      <label for="sidebar-active" class="close-sidebar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="32" viewBox="0 -960 960 960" width="32"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        <h1 class="red">dya</h1>
+      </label>
+
+      <!-- NOT IN TUTORIAL: The <a> tags are linked to the subpages -->
+      
+      <a class="home-link" href="index.html">الرئيسية</a> 
+      <a href="#abihamed"> الغزالي </a> 
+      <a href="syte/news.html">الاخبار</a>
+      <a href="syte/exam.html">dya exam</a>
+      <a href="syte/social.html">التواصل</a>
+      
+    </div>
+  </nav>
+  <h1 class="mar">abihamed</h1>
+  <div class="mor"></div>
 <div class="container">
   <div class="card-info">
     <img src="photo/school_image.jpg" alt="ثانوية أبي حامد الغزالي" class="school-image">
@@ -507,7 +105,7 @@ background: rgba(255, 255, 255, 0.1);
 <div style="height: 10px;"></div>
 <div class="text-container">
         <div class="container">
-            <h1 class="display-4">أبو حامد الغزالي</h1>
+            <h1 class="display-4" id="abihamed">أبو حامد الغزالي</h1>
         </div>
         </div>
     </header>
@@ -517,7 +115,7 @@ background: rgba(255, 255, 255, 0.1);
                 <img src="photo/al-ghazali.jpg" alt="صورة لأبو حامد الغزالي" class="img-fluid rounded shadow">
                 <br>
                 <br>
-                <p class="mt-3">
+                <p class="mt-3" >
                   أبو حامد محمد بن محمد الغزالي الطوسي، المعروف بالإمام الغزالي، هو شخصية علمية وفيلسوف إسلامي بارز في العصور الوسطى. وُلد في طوس (الطائفة الغزالية، في خراسان، إيران الحالية) حوالي عام 1058 ميلادي وتوفي في بغداد عام 1111 ميلادي. يُعتبر الغزالي من بين أبرز العلماء والفلاسفة في التاريخ الإسلامي وأحد أبرز شخصيات الفكر الإنساني على مر العصور.
                 </p>
                 <br>
@@ -553,17 +151,5 @@ background: rgba(255, 255, 255, 0.1);
     <p class="footer-text">جميع الحقوق محفوظة &copy; 2024 - mellouk dhiya (2TM)</p>
   </div>
 </footer>
-    <div class="nav-bg"></div>
-    <script>
-    
-      const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('.navbar');
-const navbg = document.querySelector('.nav-bg');
-menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
-    navbg.classList.toggle('active');
-});
-    </script>
 </body>
 </html>
