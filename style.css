@@ -1,0 +1,365 @@
+  @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+  --color-1: #0f1016;
+  --text-color: #f0f0f0;
+  --accent-color: #006aff;
+}
+.mt-3{
+  font-family: 'Lateef', serif; line-height:30px; font-size:20px
+  }
+* {
+
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+  font-size: 12pt;
+  font-family: Poppins, Segoe UI, Tahoma, sans-serif;
+}
+nav{
+  height: 60px;
+  background-color: var(--color-1);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.links-container{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+nav a{
+  
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--text-color);
+}
+nav a:hover{
+  background-color: var(--accent-color);
+}
+nav .home-link{
+  margin-right: auto;
+}
+nav svg{
+  fill: var(--text-color);
+}
+#sidebar-active{
+  display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+  display: none;
+}
+@media(max-width: 450px){
+  .links-container{
+    flex-direction: column;
+    align-items: flex-start;
+
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 10;
+    width: 300px;
+
+    background-color: var(--color-1);
+    box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
+    transition: 0.75s ease-out;
+  }
+  nav a{
+    box-sizing: border-box;
+    height: auto;
+    width: 100%;
+    padding: 20px 30px;
+    justify-content: flex-start;
+  }
+  .open-sidebar-button, .close-sidebar-button{
+    padding: 20px;
+    display: block;
+  }
+  #sidebar-active:checked ~ .links-container{
+    right: 0;
+  }
+  #sidebar-active:checked ~ #overlay{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+  }
+}
+
+
+.display-4{
+  margin-top: 20px
+}
+.show {
+  display: block;
+}
+
+/* School Image Styles */
+.school-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.card-info{
+   color: #dbdbdb;
+   font-size: 250px;
+  text-decoration: none;
+  font-weight: 60;
+  animation: fadeIn 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ background-color:#363942;
+  border-radius: 5px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
+  animation: moveRose 1.6s infinite alternate;
+}
+
+.card-description {
+  
+  animation: fadeIn 2s ease-in-out;
+    color: #fff;
+  padding: 20px;
+  text-align: center;
+  direction: rtl ;
+}
+
+/* Spacer Styles */
+.spacer {
+  height: 20px; 
+}
+
+/* Main Content Styles */
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 0 20px;
+  text-align: center;
+  
+  
+}
+.container2 {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 10 20px;
+  text-align: center;
+      background: wheat;
+    text-align:right;
+      border-radius: 17px;
+    direction: rtl;
+    
+}
+.card-info2{
+animation: fadeIn 2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 70px;  border-radius: 17px;
+
+
+   
+}
+.grid-row {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* تقسيم العناصر إلى زوجين في كل سطر */
+  gap: 20px; /* هامش بين العناصر */
+}
+
+.card-link {
+  
+  text-decoration: none; /* إزالة تزيين الرابط */
+  color: inherit; /* استخدام لون النص نفسه */
+}
+
+.cards {
+animation: fadeIn 2s ease-in-out;
+  background: #363942;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
+  width: calc(110% - 10px); /* تحديد عرض البطاقة بنسبة 50% من عرض السطر مع هامش بينهم */
+   
+}
+@media screen and (min-width: 768px) {
+  .grid-row {
+    display: flex;
+    justify-content: center; /* توسيط البطاقات على شاشة الكمبيوتر */
+  }
+  .mor{
+  height:200px;
+}
+.card-info{
+animation: fadeIn 2s ease-in-out;
+    width: 50%; /* تحديد عرض البطاقة في شاشة ا
+    لكمبيوتر */
+    margin: 0 auto; /* توسيط البطاقة 
+    */
+
+  margin-bottom: 50px; /* إضافة مسافة بين البطاقة والمحتوى أسفلها */
+
+animation: moveRose 1.6s infinite alternate;
+  }
+  }
+
+  .school-image {
+    max-width: 100%; /* تحديد أقصى عرض للصورة بناءً على عرض البطاقة */
+    height: auto; /* للحفاظ على نسبة العرض إلى الارتفاع */
+  }
+
+  .card-description {
+    font-size: 14px; /* تحديد حجم الخط للنص في شاشة الكمبيوتر */
+    
+  }
+}
+ 
+  .cards {
+    width: calc(50% - 20px); /* تحديد عرض البطاقات على شاشات الكمبيوتر */
+    margin-right: 20px; /* إضافة هامش بين البطاقات */
+  }
+
+  .cards:last-child {
+    margin-right: 0; /* لإزالة الهامش الأيمن للبطاقة الأخيرة وتجنب التلاصق */
+  }
+}
+
+.cards p {
+  padding: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-link:hover .cards {
+  transform: translateY(-5px);
+}
+
+
+
+
+.exam-table-frame {
+  border: 7px solid black;
+  display: inline-block;
+  padding: 10px;
+  
+}
+
+.exam-table-title {
+  color: black;
+  
+}
+
+
+/* Footer Styles */
+.footer {
+    position: fixed;
+  background-color: #d8d8d8;
+  padding: 10px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.footer-text {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+.exam-table-container {
+  
+  text-align: center; /* توسيط الجدول في الصفحة */
+}
+
+.exam-table-image {
+  max-width: 120px; /* جعل الصورة تأخذ عرضًا أقصى مناسبًا */
+  height: 70%; /* تغيير الارتفاع تلقائيًا للحفاظ على نسبة العرض إلى الارتفاع */
+}
+.rectangle-container {
+background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 9px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+  margin-top: 20px;
+}
+
+.text-container p {
+  margin-bottom: 90px;
+
+}
+@media screen and (min-width: 720px) {
+  .exam-table-container {
+ align-self: center;
+    max-width: 100%; /* يمكن تعديل هذا الحجم حسب الحاجة */
+    
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+background-color:#161b21;
+    margin: 0;
+    padding: 0;
+
+}
+
+.red{
+  color: white;
+  
+}
+.mar{
+  color: white;
+text-align: center;
+margin-top: -13%;
+
+}
+
+
+        
+              /* Animations */
+        @keyframes moveRose {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
