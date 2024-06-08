@@ -3,19 +3,18 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f8f9fa;
-    color: #333;
 }
 
 header {
-    background-color: #343a40;
-    color: #fff;
+    background-color: #0f1016;
+    color: #f0f0f0;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .container {
     max-width: 900px;
-    margin: 20px auto;
+    margin: 20px 20px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
@@ -52,4 +51,7 @@ header {
     color: #555;
     line-height: 1.6;
     margin-bottom: 0;
+}
+.hide{
+  display: none;
 }
