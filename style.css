@@ -1,12 +1,27 @@
   @import url(https://fonts.googleapis.com/earlyaccess/lateef.css);
+  
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&family=Reem+Kufi:wght@400..700&display=swap');
+
   @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root{
+  --shad:rgba(0, 0, 0, 0.1);
+  --card:#363942;
   --color-1: #0f1016;
   --text-color: #f0f0f0;
   --accent-color: #006aff;
+  
+    --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --main-color: #0ef
 }
+.mt-2{
+  font-family: 'Lateef', serif; line-height:30px; font-size:20px
+  }
 .mt-3{
   font-family: 'Lateef', serif; line-height:30px; font-size:20px
+  }
+  .mt-4{
+  font-family: "Baloo Bhaijaan 2", sans-serif;
   }
 * {
 
@@ -134,7 +149,7 @@ nav svg{
 }
 
 .card-description {
-  
+    font-family: 'Lateef', serif; 
   animation: fadeIn 2s ease-in-out;
     color: #fff;
   padding: 20px;
@@ -157,6 +172,7 @@ nav svg{
   
 }
 .container2 {
+  overflow-x: hidden;
   max-width: 1000px;
   margin: 50px auto;
   padding: 10 20px;
@@ -190,8 +206,20 @@ animation: fadeIn 2s ease-in-out;
   color: inherit; /* استخدام لون النص نفسه */
 }
 
-.cards {
-animation: fadeIn 2s ease-in-out;
+.cards1 {
+ background: #363942;
+  
+  display: flex;
+justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 17px;
+  box-shadow: 0 5px 20px rgba(10, 10, 10, 0.7);
+  margin-bottom: 20px;
+  width: calc(110% - 10px); /* تحديد عرض البطاقة بنسبة 50% من عرض السطر مع هامش بينهم */
+   
+}
+.cards2 {
   background: #363942;
   display: flex;
   flex-direction: column;
@@ -234,18 +262,21 @@ animation: moveRose 1.6s infinite alternate;
   }
 }
  
-  .cards {
-    width: calc(50% - 20px); /* تحديد عرض البطاقات على شاشات الكمبيوتر */
-    margin-right: 20px; /* إضافة هامش بين البطاقات */
-  }
+ 
 
-  .cards:last-child {
+  .cards1:last-child {
+    margin-right: 0; /* لإزالة الهامش الأيمن للبطاقة الأخيرة وتجنب التلاصق */
+  }
+  .cards2:last-child {
     margin-right: 0; /* لإزالة الهامش الأيمن للبطاقة الأخيرة وتجنب التلاصق */
   }
 }
 
-.cards p {
-  padding: 20px;
+.cards1 p {
+  padding: 2px;
+}
+.cards2 p {
+  padding: 10px;
 }
 
 .card-link {
@@ -253,8 +284,13 @@ animation: moveRose 1.6s infinite alternate;
   color: inherit;
 }
 
-.card-link:hover .cards {
+.card-link:hover .cards1 {
   transform: translateY(-5px);
+}
+.card-link:hover .cards2 {
+
+  transform: translateY(-5px);
+
 }
 
 
@@ -328,16 +364,16 @@ background: rgba(255, 255, 255, 0.1);
   }
 }
 body {
+  overflow-x: hidden;
   font-family: Arial, sans-serif;
-background-color:#161b21;
-    margin: 0;
-    padding: 0;
-
+  background-color:#161b21;
+  margin: 0;
+ padding: 0;
 }
 
 .red{
   color: white;
-  
+  width:30rem;
 }
 .mar{
   color: white;
@@ -363,3 +399,148 @@ margin-top: -13%;
             from { transform: translateY(20px); opacity: 0; }
             to { transform: translateY(0); opacity: 1; }
         }
+        section {
+
+  min-height: 100vh;
+
+  padding: 10rem 9% 2rem;
+}
+span{
+
+  color: var(--main-color);
+
+}
+.btn{
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      background: var(--card);
+      border-radius:4rem;
+      box-shadow: 0 0 1rem var(--shad);
+      font-size: 1.6rem;
+        box-shadow: 0 5px 20px var(--shad);
+      color: white;
+      letter-spacing: .1rem;
+      font-weight: 600;
+      transition: .5s ease;
+}
+.btn:hover{
+  box-shadow: none;
+}
+.contact h2{
+
+  margin-bottom: 3rem;
+
+}
+.contact form {
+
+  max-width: 70rem;
+
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.contact form .input-box{
+ 
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.contact form .input-box input, .contact form textarea{
+  width: 100%;
+  padding: 1.5rem;
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem ;
+  margin: .7rem 0;
+}
+.contact form .input-box input{
+  width: 49%;
+}
+.contact form textarea{
+  resize: none;
+}
+.contact form .btn{
+  margin-top: 2rem;
+  cursor: pointer;
+}
+@media (max-width: 991px) {
+  section {
+  padding: 1rem 3% 2rem;
+  }
+  .contact{
+ 
+  min-height: auto;
+
+}
+}
+
+
+.btt{
+        display: inline-block;
+      padding: 1rem 1rem;
+      background: var(--second-bg-color);
+      border-radius:2rem;
+      font-size: 1rem;
+      color: rgb(238,238,238);
+      letter-spacing: .1rem;
+      font-weight: 600;
+      transition: .5s ease;
+     margin-bottom:2rem;
+  width: 80%;
+    justify-content: space-between;
+     box-shadow: 0 5px 20px var(--shad);
+}
+.btt:hover{
+  box-shadow: none;
+}
+.m i{
+  color: var(--card);
+  font-size: 3rem;
+}
+
+
+.btt span{
+  color: var(--text-color);
+  font-size: 1.4rem;
+    margin-right: 4rem;
+  margin-left: 4rem;
+  
+}
+.final{
+  margin-top: 2rem;
+}
+.m{
+  margin-top: 2rem;
+}
+@media (max-width: 768px) {
+    .heading{
+display: flex;
+color: white;
+justify-content: center;
+align-items: center;
+  }
+  .contact form .input-box input, .contact form textarea{
+
+  width: 90%;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem ;
+  margin: .7rem 0;
+}
+.contact form .input-box input{
+  width: 49%;
+}
+.contact h2{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.contact form {
+  max-width: 60rem;
+  margin: 1rem auto;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+}
